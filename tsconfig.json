@@ -40,7 +40,8 @@
     "middleware.ts",
     ".next/types/**/*.ts",
     ".next-render-check/types/**/*.ts",
-    ".next-open-preview/types/**/*.ts"
+    ".next-open-preview/types/**/*.ts",
+    ".next-render-deploy-check/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
