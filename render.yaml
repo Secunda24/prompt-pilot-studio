@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: promptpilot-studio
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: 20.20.2
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
+      - key: NEXT_PUBLIC_APP_NAME
+        value: PromptPilot Studio
+      - key: NEXT_PUBLIC_WORKSPACE_NAME
+        value: PromptPilot Creative Hub
+      - key: NEXT_PUBLIC_COMPANY_NAME
+        value: PromptPilot
+      - key: NEXT_PUBLIC_LOGO_PLACEHOLDER
+        value: PP
+      - key: NEXT_PUBLIC_ACCENT_HSL
+        value: 174 74% 41%
+      - key: NEXT_PUBLIC_SUPPORT_EMAIL
+        value: support@promptpilot.studio
+      - key: NEXT_PUBLIC_SITE_URL
+        value: https://promptpilot-studio.onrender.com
+      - key: NEXT_PUBLIC_DEFAULT_TONE
+        value: Confident, premium, clear
+      - key: NEXT_PUBLIC_DEFAULT_PLATFORM
+        value: Instagram
+      - key: NEXT_PUBLIC_DEFAULT_CTA_STYLE
+        value: Book a strategy call
