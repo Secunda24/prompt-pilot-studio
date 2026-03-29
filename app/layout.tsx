@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import { Providers } from "@/components/shared/providers";
 import { getPromptPilotBrandingSettings } from "@/lib/promptpilot-branding";
@@ -12,10 +12,13 @@ export async function generateMetadata(): Promise<Metadata> {
     title: `${branding.portalName} | Premium Campaign Studio Demo`,
     description:
       "PromptPilot Studio turns ideas into campaigns, prompts, storyboards, landing copy, and creative direction for modern businesses.",
-    manifest: "/manifest.webmanifest",
-    themeColor: "#14b8a6"
+    manifest: "/manifest.webmanifest"
   };
 }
+
+export const viewport: Viewport = {
+  themeColor: "#14b8a6"
+};
 
 export default function RootLayout({
   children
